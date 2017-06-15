@@ -2,69 +2,76 @@
 
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="utf-8">
-    <title>Un foro mas </title>
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-  </head>
-  <body>
-
-    <h1>Foro de las ideas</h1>
-     <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#myModal">
-    Agrega un nuevo tema 
-  </button>
-  <form>
-    <button id="botonBusqueda">Buscar</button>
-    <input type="text" id="palabra-buscar">
-  </form>
-  <table class="table table-striped table-responsive">
+<head>
+  <meta charset="utf-8">
+  <title>Un foro mas </title>
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+</head>
+<body>
+  <h1 class="text-center">Foro de las ideas</h1>
+  <div class="row">
+    <div class="col-lg-2"></div>
+    <div class="col-lg-4">
+      <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#myModal">
+        Agrega un nuevo tema 
+      </button>
+    </div>
+    <div class="col-lg-4">
+      <div class="input-group">
+       <input type="text" id="palabra-buscar" class="form-control" placeholder="palabra del tema a buscar">
+       <span class="input-group-btn">
+         <button id="botonBusqueda" type="button" class="btn btn-primary btn-md">Buscar</button>
+       </span>
+     </div>
+   </div>
+   <div class="col-lg-2"></div>
+ </div>
+ <div class="row">
+  <div class="col-lg-2"></div>
+  <div class="col-lg-8">
+   <table class="table table-striped table-responsive">
     <thead>
       <th>Titulo</th>
       <th>Autor</th>
       <th>Total respuestas</th>
     </thead>
     <tbody id="listaTemas">
-      
     </tbody>
-  </table>
-   <!-- Modal para agregar un nuevo tema -->
-    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-    <div class="modal-dialog" role="document">
-      <form id="agregar_formulario">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            <h4 class="modal-title" id="myModalLabel">Agrega un nuevo Tema</h4>
+  </table> 
+</div>
+</div>
+
+<!-- Modal para agregar un nuevo tema -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <form id="agregar_formulario">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel">Agrega un nuevo Tema</h4>
+        </div>
+        <div class="modal-body">
+          <div class="form-group">
+            <label for="nombre-tarea">Autor:</label>
+            <input type="text" class="form-control" name="nombre" id="nombre-autor" placeholder="Nombre">
           </div>
-          <div class="modal-body">
-              <div class="form-group">
-                <label for="nombre-tarea">Autor:</label>
-                <input type="text" class="form-control" name="nombre" id="nombre-autor" placeholder="Nombre">
-              </div>
-              <div class="form-group">
-                <label for="nombre-tarea">Tema:</label>
-                <textarea class="form-control" name="nombre" id="titulo-tema" placeholder="Escribe esa idea grandiosa"></textarea>
-              </div>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
-            <button type="submit" class="btn btn-primary">Agregar</button>
+          <div class="form-group">
+            <label for="nombre-tarea">Tema:</label>
+            <textarea class="form-control" name="nombre" id="titulo-tema" placeholder="Escribe esa idea grandiosa"></textarea>
           </div>
         </div>
-      </form>
-    </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+          <button type="submit" class="btn btn-primary">Agregar</button>
+        </div>
+      </div>
+    </form>
   </div>
-
-
-
-
-    
-    <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="js/bootstrap.min.js"></script>
-    
-    <script src="js/functions.js"></script>
-    <script src="js/main.js"></script>
-    
-  </body>
+</div>
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script src="js/functions.js"></script>
+<script src="js/main.js"></script>
+</body>
 </html>
