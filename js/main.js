@@ -1,5 +1,5 @@
 var api = {
-	url: "http://examen-laboratoria-sprint-5.herokuapp.com/topics"
+	url: "https://examen-laboratoria-sprint-5.herokuapp.com/topics"
 };
 var $tasksList = $("#listaTemas");
 console.log($tasksList)
